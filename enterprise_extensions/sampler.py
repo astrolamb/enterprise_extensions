@@ -1233,9 +1233,9 @@ def setup_sampler(pta, outdir='chains', resume=False,
     if 'cw_log10_h' in pta.param_names:
         print('Adding CW strain prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_cw_log_uniform_distribution, 10)
-    if 'cw_log10_Mc' in pta.param_names:
-        print('Adding CW prior draws...\n')
-        sampler.addProposalToCycle(jp.draw_from_cw_distribution, 10)
+    #if 'cw_log10_Mc' in pta.param_names:
+    #    print('Adding CW prior draws...\n')
+    #    sampler.addProposalToCycle(jp.draw_from_cw_distribution, 10)
 
     # free spectrum prior draw
     if np.any(['log10_rho' in par for par in pta.param_names]):
