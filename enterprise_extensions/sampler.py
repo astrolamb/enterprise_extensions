@@ -1165,32 +1165,32 @@ def setup_sampler(pta, outdir='chains', resume=False,
         sampler.addProposalToCycle(jp.draw_from_empirical_distr, 10)
 
     # Red noise prior draw
-    if 'red noise' in jp.snames:
+    if 'red noise' in jp.snames and jp.snames['red noise']:
         print('Adding red noise prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_red_prior, 10)
 
     # DM GP noise prior draw
-    if 'dm_gp' in jp.snames:
+    if 'dm_gp' in jp.snames and jp.snames['dm_gp']:
         print('Adding DM GP noise prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_dm_gp_prior, 10)
 
     # DM annual prior draw
-    if 'dm_s1yr' in jp.snames:
+    if 'dm_s1yr' in jp.snames and jp.snames['dm_s1yr']:
         print('Adding DM annual prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_dm1yr_prior, 10)
 
     # DM dip prior draw
-    if 'dmexp' in jp.snames:
+    if 'dmexp' in jp.snames and jp.snames['dmexp']:
         print('Adding DM exponential dip prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_dmexpdip_prior, 10)
 
     # DM cusp prior draw
-    if 'dm_cusp' in jp.snames:
+    if 'dm_cusp' in jp.snames and jp.snames['dm_cusp']:
         print('Adding DM exponential cusp prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_dmexpcusp_prior, 10)
 
     # DMX prior draw
-    if 'dmx_signal' in jp.snames:
+    if 'dmx_signal' in jp.snames and jp.snames['dmx_signal']:
         print('Adding DMX prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_dmx_prior, 10)
 
